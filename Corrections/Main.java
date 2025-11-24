@@ -21,7 +21,24 @@ public class Main {
             System.out.println(n);
         }
         // création de l'objet de type StringAnalyzer
-        StringAnalyzer s = new StringAnalyzer();
-        System.out.println(s.showNumber());
+        StringAnalyzer s = new StringAnalyzer("Bonjour tout 123 JAVA");
+
+        // System.out.println( "Bonjour".indexOf("o") + " " + "Bonjour".indexOf("x"));
+
+        System.out.println( "Nombre de voyelles " + s.countVowels());
+
+        char letter = 'B';
+        char letter2 = 'D';
+
+        System.out.println( 'A' < letter && letter < 'C' );
+        System.out.println( 'A' < letter2 && letter2 < 'C' );
+
+        char number = '0';
+
+        System.out.println( '0' <= number && number <= '9' );
+        System.out.println( "nombre de digits " + s.countDigits() );
+        System.out.println( "nombre de majuscule " + s.countUppercase() );
     }
+
+
 }
