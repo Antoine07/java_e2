@@ -1,6 +1,8 @@
 
 public class Main {
     public static void main(String[] args) {
+
+
         System.out.println("Hello Java oui !");
 
         // tester les déclarations de types ici 
@@ -39,6 +41,5 @@ public class Main {
         System.out.println( "nombre de digits " + s.countDigits() );
         System.out.println( "nombre de majuscule " + s.countUppercase() );
     }
-
 
 }
