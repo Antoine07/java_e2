@@ -20,7 +20,7 @@ L'application doit :
 1. gérer les employés et leur badge,
 2. gérer les portes et leurs niveaux d'accès,
 3. vérifier si un employé peut ouvrir une porte,
-4. enregistrer en mémoire les tentatives d'accès (sans console, sans fichiers, sans email).
+4. enregistrer en mémoire les tentatives d'accès (sans console, sans fichiers, sans email), par exemple dans un Map.
 
 Les concepts à utiliser :
 
