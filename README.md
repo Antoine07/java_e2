@@ -100,7 +100,7 @@ Dans le dossier, créez le si il n'existe pas, `.vscode` à la racine du projet,
 
 # Coder directement dans VS Code (vidéo)
 
-![Installation](./Supports/Slides/assets/hello_world.gif)
+![Installation](./docs/assets/hello_world.gif)
 
 # Création d'un projet Java
 
@@ -117,7 +117,7 @@ Cette installation est intéressante pour le débug Java et la complémention au
 
 # Création d'un projet (en vidéo)
 
-![Installation](./Supports/Slides/assets/project.gif)
+![Installation](./docs/assets/assets/project.gif)
 
 #  Exécuter un programme Java
 
