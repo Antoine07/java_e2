@@ -1,4 +1,4 @@
-# ✔️ Installation / Mise à jour de Java (Windows & macOS)
+#  Installation / Mise à jour de Java (Windows & macOS)
 
 Vous pouvez avoir plusieurs versions de Java installées sur votre machine, il faut cependant configurer votre VS Code pour choisir la bonne version.
 
@@ -41,7 +41,7 @@ Puis :
 
 ---
 
-# ✔️ 3. Extensions nécessaires dans VS Code
+# 3. Extensions nécessaires dans VS Code
 
 ### Extension indispensable :
 
@@ -56,14 +56,3 @@ Ce pack inclut automatiquement :
 * Java Dependency Viewer
 
 ⚠️ Il n'est pas nécessaire d'installer *Language Support for Java* séparément.
-
----
-
-# ✔️ Synthèse à donner aux étudiants
-
-1. Installer un JDK récent (Java 21 recommandé) depuis Adoptium
-2. Indiquer à VS Code d'utiliser ce JDK via **Java: Configure Java Runtime**
-3. Installer dans VS Code :
-   ✔ **Extension Pack for Java**
-
-Avec ces trois étapes, l'environnement Java est opérationnel sur Windows et macOS.
