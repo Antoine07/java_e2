@@ -59,6 +59,8 @@ Il n'est pas nécessaire d'installer *Language Support for Java* séparément.
 
 ## Fichier de settings.json 
 
+Vous pouvez configurez votre projet pour définir un dossier racine pour vos packages.
+
 Dans le dossier, créez le si il n'existe pas, `.vscode` à la racine du projet, et créez le fichier `settings.json`
 
 ```json
@@ -90,7 +92,10 @@ Dans le dossier, créez le si il n'existe pas, `.vscode` à la racine du projet,
 
     // Aucun dossier n’est considéré comme source java par défaut
     // → les étudiants peuvent choisir un dossier racine librement
-    "java.project.sourcePaths": [],
+    "java.project.sourcePaths": [
+      "projet_java",
+      "Cart"
+   ],
 
     // Aucune bibliothèque externe imposée
     "java.project.referencedLibraries": []
