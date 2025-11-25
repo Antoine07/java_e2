@@ -30,7 +30,7 @@ Puis :
 
 ---
 
-# ✔️ 2. Configurer VS Code pour utiliser la bonne version de Java
+#  2. Configurer VS Code pour utiliser la bonne version de Java
 
 1. Ouvrir la palette de commandes dans VS Code :
    **Cmd + Shift + P** (macOS)
@@ -45,7 +45,7 @@ Puis :
 
 ### Extension indispensable :
 
-✔ **Extension Pack for Java** (Microsoft)
+**Extension Pack for Java** (Microsoft)
 
 Ce pack inclut automatiquement :
 
@@ -55,4 +55,79 @@ Ce pack inclut automatiquement :
 * Maven for Java
 * Java Dependency Viewer
 
-⚠️ Il n'est pas nécessaire d'installer *Language Support for Java* séparément.
+Il n'est pas nécessaire d'installer *Language Support for Java* séparément.
+
+## Fichier de settings.json 
+
+Dans le dossier, créez le si il n'existe pas, `.vscode` à la racine du projet, et créez le fichier `settings.json`
+
+```json
+{
+    // Masque les fichiers .log dans l’explorateur
+    "files.exclude": {
+        "**/*.log": true
+    },
+
+    // Taille de police confortable pour coder en classe
+    "editor.fontSize": 16,
+
+    // Tabulations de 4 espaces (standard pédagogique)
+    "editor.tabSize": 4,
+
+    // Retour automatique à la ligne pour éviter le scroll horizontal
+    "editor.wordWrap": "on",
+
+    // Met à jour automatiquement la configuration Java
+    // Évite les pop-ups « update build configuration »
+    "java.configuration.updateBuildConfiguration": "automatic",
+
+    // Ignore les erreurs de classpath incomplet
+    // Permet de travailler avec un simple fichier Main.java hors projet
+    "java.errors.incompleteClasspath.severity": "ignore",
+
+    // Cache la section “Open Editors” pour alléger l’interface
+    "explorer.openEditors.visible": 0,
+
+    // Aucun dossier n’est considéré comme source java par défaut
+    // → les étudiants peuvent choisir un dossier racine librement
+    "java.project.sourcePaths": [],
+
+    // Aucune bibliothèque externe imposée
+    "java.project.referencedLibraries": []
+}
+```
+
+
+# Coder directement dans VS Code (vidéo)
+
+![Installation](./Supports/Slides/assets/hello_world.gif)
+
+# Création d'un projet Java
+
+Vous pouvez également créer un projet Java
+
+Dans VS Code tapez : ctrl + shift + p
+
+Cette installation est intéressante pour le débug Java et la complémention automatique dans VS Code.
+
+1. Cherchez Java Create Project
+1. No build tools
+1. Choisissez un dossier 
+1. Nommez votre projet
+
+# Création d'un projet (en vidéo)
+
+![Installation](./Supports/Slides/assets/project.gif)
+
+#  Exécuter un programme Java
+
+Placez-vous à la racine du projet, puis utilisez le bouton **run**
+
+▶ **Run**
+
+Sinon via Terminal :
+
+```bash
+javac Hello.java
+java Hello
+```
