@@ -117,7 +117,7 @@ Cette installation est intéressante pour le débug Java et la complémention au
 
 # Création d'un projet (en vidéo)
 
-![Installation](./docs/assets/project.gif)
+![projets](./docs/assets/project.gif)
 
 #  Exécuter un programme Java
 
