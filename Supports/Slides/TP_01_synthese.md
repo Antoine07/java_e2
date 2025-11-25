@@ -8,7 +8,7 @@ Les notions suivantes seront abordées dans le TP.
 
 ---
 
-# 📘 Exercice de synthèse — SRP, Composition, Agrégation
+# Exercice de synthèse — SRP, Composition, Agrégation
 
 ## **Contexte applicatif : système d'accès à un bâtiment**
 
