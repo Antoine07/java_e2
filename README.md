@@ -91,10 +91,10 @@ Dans le dossier, créez le si il n'existe pas, `.vscode` à la racine du projet,
     "explorer.openEditors.visible": 0,
 
     // Aucun dossier n’est considéré comme source java par défaut
-    // → les étudiants peuvent choisir un dossier racine librement
     "java.project.sourcePaths": [
       "projet_java",
-      "Cart"
+      "Cart",
+      "Examples"
    ],
 
     // Aucune bibliothèque externe imposée
