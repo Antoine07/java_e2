@@ -12,7 +12,7 @@ public class Authenticate {
 
     boolean auth(String email, String password) {
         for (User u : users) {
-            if (u.getEmail().equals(password) && u.getPassword().equals(password)) {
+            if (u.getEmail().equals(email) && u.getPassword().equals(password)) {
                 return true;
             }
         }

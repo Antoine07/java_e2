@@ -1,8 +1,6 @@
 
 public class Main {
     public static void main(String[] args) {
-
-
         System.out.println("Hello Java oui !");
 
         // tester les déclarations de types ici 

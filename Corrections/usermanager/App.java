@@ -1,5 +1,6 @@
 package usermanager;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class App {
@@ -43,5 +44,20 @@ public class App {
         for (String pref : alan.getPreferences().values()) {
             System.out.println(pref);
         }
+
+        List<User> users = new ArrayList<>();
+
+        users.add(alan);
+        users.add(alice);
+        users.add(ada);
+
+        Authenticate authenticate = new Authenticate(users);
+
+        // test de la méthode auth 
+        System.out.println( authenticate.auth("alan@alan.fr", "123"));
+        System.out.println( authenticate.auth("alice@alice.fr", "123"));
+        System.out.println( authenticate.auth("alice@alice.fr", "1234"));
+        System.out.println( authenticate.auth("benard@bernard.fr", "123"));
+
     }
 }
