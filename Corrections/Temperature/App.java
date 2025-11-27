@@ -1,4 +1,4 @@
-package Temperature;
+package temperature;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package Word;
+package word;
 
 public class App {
     public static void main(String[] args){

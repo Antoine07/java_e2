@@ -1,4 +1,4 @@
-package Cart;
+package cart;
 
 import java.util.Map; // type général
 
