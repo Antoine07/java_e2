@@ -136,3 +136,47 @@ Sinon via Terminal :
 javac Hello.java
 java Hello
 ```
+
+# Configuration projet - exemple parking
+
+Dans `.vscode` à la racine d'un nouveau projet créez le fichier `settings.json` suivant:
+
+```json
+{
+  "files.exclude": {},
+
+  "editor.fontSize": 16,
+  "editor.tabSize": 4,
+  "editor.wordWrap": "on",
+
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.errors.incompleteClasspath.severity": "ignore",
+
+  // Dossier de sortie pour les .class
+  "java.project.outputPath": "bin",
+
+  // Compilation automatique à chaque sauvegarde
+  "java.autobuild.enabled": true,
+
+  // masque open editors
+  "explorer.openEditors.visible": 0,
+
+  "java.project.sourcePaths": ["parking"],
+  "java.project.referencedLibraries": []
+}
+```
+
+Créez le dossier parking et le fichier `Main.java` suivant pour tester la configuration: 
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello Parking !") ;
+    }
+}
+```
+Si tout est bien installé sur votre machine et dans vs code vous devriez voir un dossier `bin` se créé à la racine de votre projet.
+
+Pour exécuter votre fichier Main vous pouvez maintenant cliquer sur le bouton en haut à droite de votre fenêtre vs code, le code s'éxécutera dans le terminal automatiquement:
+
+▶ **Run**
