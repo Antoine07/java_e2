@@ -5,9 +5,9 @@ Le jeu doit enregistrer chaque partie dans un fichier texte et organiser le code
 
 ---
 
-# Animation 
+# Le jeu en console 
 
-<img src="./images/morpion.gif" width="500" />
+<img src="./images/morpion.gif" width="800" />
 
 # **Structure du TP**
 
@@ -20,6 +20,8 @@ Le projet doit contenir les classes suivantes :
 1. **Main** : point d'entrée du programme
 
 Le travail consiste à écrire chacune de ces classes en suivant les instructions de ce TP.
+
+Vous avez du code en fin de page pour vous aidez à réaliser le TP.
 
 ---
 
@@ -138,49 +140,85 @@ Le rendu doit comprendre :
 
 # **Remarques et aides**
 
-Utilisez la classe suivante vu en cours pour réaliser le TP
+Utilisez la classe suivante, vu en cours pour réaliser le TP.
 
 ```java
 package IA;
-
 import java.net.http.*;
 import java.net.*;
 import java.io.IOException;
 
+/**
+ * Service chargé d'envoyer un prompt à une IA générative
+ * et de récupérer sa réponse sous forme de texte.
+ * L’implémentation utilise l’API Groq compatible OpenAI.
+ */
 public class AiService implements IAServiceInterface {
 
+    // Clé API (à remplacer)
     private static final String API_KEY = "XXX";
 
+    /**
+     * Envoie un prompt à l’IA et renvoie la réponse brute.
+     * @param prompt Le texte que l'on envoie à l'IA
+     * @return La réponse JSON complète produite par l’API
+     */
     @Override
     public String askAi(String prompt) throws IOException, InterruptedException {
-        
+
+        // Construction manuelle du JSON envoyé à l’API.
+        // Le champ "content" doit être échappé pour rester valide.
         String json = "{"
-                + "\"model\": \"openai/gpt-oss-20b\","
-                + "\"messages\": ["
-                + "    {\"role\": \"user\", \"content\": \"" + escapeJson(prompt) + "\"}"
+                + "\"model\": \"openai/gpt-oss-20b\","       // Modèle utilisé
+                + "\"messages\": ["                         // Format type ChatGPT
+                + "    {\"role\": \"user\", \"content\": \"" 
+                + escapeJson(prompt) 
+                + "\"}"
                 + "]"
                 + "}";
 
+        // Construction de la requête HTTP envoyée à Groq
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://api.groq.com/openai/v1/chat/completions"))
-                .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer " + API_KEY)
-                .POST(HttpRequest.BodyPublishers.ofString(json))
+                .header("Content-Type", "application/json")   // On envoie du JSON
+                .header("Authorization", "Bearer " + API_KEY) // Authentification
+                .POST(HttpRequest.BodyPublishers.ofString(json)) // Corps de la requête
                 .build();
 
+        // Création d'un client HTTP
         HttpClient client = HttpClient.newHttpClient();
+
+        // Envoi de la requête et récupération de la réponse sous forme de texte
         HttpResponse<String> response =
                 client.send(request, HttpResponse.BodyHandlers.ofString());
 
+        // Renvoie uniquement le corps JSON de la réponse
         return response.body();
     }
 
+    /**
+     * Échappe les caractères dangereux pour garantir un JSON valide.
+     * Indispensable car le prompt peut contenir des guillemets ou des retours à la ligne.
+     */
     public static String escapeJson(String s) {
-        return s.replace("\\", "\\\\")
-                .replace("\"", "\\\"")
-                .replace("\n", "\\n");
+        return s.replace("\\", "\\\\")   // Échappe les backslashes
+                .replace("\"", "\\\"")   // Échappe les guillemets
+                .replace("\n", "\\n");   // Remplace les retours à la ligne
     }
 }
+
 ```
 
+## La classe Board 
 
+Elle va gérer l'affichage du Morpion en console.
+
+Structure des données
+
+```java
+private char[][] grid = {
+        {' ', ' ', ' '},
+        {' ', ' ', ' '},
+        {' ', ' ', ' '}
+};
+```
