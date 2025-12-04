@@ -3,7 +3,7 @@
 Construire un jeu du morpion en Java, jouable dans la console, dans lequel l'IA joue contre l'utilisateur.
 Le jeu doit enregistrer chaque partie dans un fichier texte et organiser le code en plusieurs classes.
 
-Attention vous devez également rédiger un texte qui présente les notions suivantes, sans utiliser l'IA, voyez en bas de la page.
+Attention vous devez également rédiger un texte qui présente des notions sur l'IA, voyez en fin de page.
 
 ---
 
