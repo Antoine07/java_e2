@@ -3,6 +3,8 @@
 Construire un jeu du morpion en Java, jouable dans la console, dans lequel l'IA joue contre l'utilisateur.
 Le jeu doit enregistrer chaque partie dans un fichier texte et organiser le code en plusieurs classes.
 
+Attention vous devez également rédiger un texte qui présente les notions suivantes, sans utiliser l'IA, voyez en bas de la page.
+
 ---
 
 # Le jeu en console 
@@ -222,3 +224,11 @@ private char[][] grid = {
         {' ', ' ', ' '}
 };
 ```
+
+## Questions
+
+Vous devez rédiger les questions suivantes dans un fichier `md`.
+
+1. Qu'est qu'une IA non générative ?
+1. Qu'est qu'une IA générative ?
+1. Décrire la machine de Turing.

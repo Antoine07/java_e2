@@ -6,6 +6,8 @@ Les notions suivantes seront abordées dans le TP.
 * **composition**
 * **agrégation**
 
+Attention vous devez également rédiger un texte qui présente les notions suivantes, sans utiliser l'IA, voyez en bas de la page.
+
 ---
 
 # Exercice de synthèse — SRP, Composition, Agrégation
@@ -77,3 +79,10 @@ Refactorisez entièrement le système en séparant clairement les responsabilit�
 1. Les classes refactorisées
 1. Une classe `App` avec un scénario simple d'utilisation (sans affichage)
 
+## Questions
+
+Vous devez rédiger les questions suivantes dans un fichier `md`.
+
+1. Qu'est qu'une IA non générative ?
+1. Qu'est qu'une IA générative ?
+1. Décrire la machine de Turing.
